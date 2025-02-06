@@ -27,4 +27,4 @@ def minmax_lst(min_val, max_val):
         if lst[i] == min_val:
             min_lst.append(i)
         if lst[i] == max_val:
-            max_lst.append(i)
+            max_lst.append(i) 
