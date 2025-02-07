@@ -7,10 +7,11 @@ for tc in range(1, T+1):
         subset = []
         for j in range(12):
             if i & (1<<j):
-                if :
-                    subset.append(arr[j])
+                subset.append(arr[j])
+        if K in subset:
+            result = subset.count(K)
 
-    print(f'#{tc} {subset}')
+    print(f'#{tc} {result}')
 
 
     # print(f'#{tc} {count}')
