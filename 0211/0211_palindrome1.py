@@ -20,3 +20,18 @@ for t in range(1,11):
             result = palindrome(col_lst[j][i:i + n], n)
             count += result
     print(f'#{t}', count)
+
+
+# 선생님 방법
+def check_palindrome(arr, N, L):
+    cnt = 0
+    for s in range(N-L+1):
+        e = s + L - 1
+        for i in range(L//2):
+            if arr[s+i] != arr[e-i]:
+                break
+        else:
+            cnt += 1
+    return cnt
+
+for
