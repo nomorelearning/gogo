@@ -1,6 +1,12 @@
+import sys
+sys.stdin = open('test.txt')
 
 def dfs(s):
-    pass
+    visited[s] = 1
+    result.append(s)
+    for nxt in graph[s]:
+        if not visited[nxt]:
+            dfs(nxt)
 
 T = int(input())
 for t in range(1,T+1):
@@ -16,9 +22,14 @@ for t in range(1,T+1):
         if not graph[s]:
             continue
         result = []
-        visited = [0] * (v+1)
-
+        visited = [0] * (n+1)
         dfs(s)
-        result_arr[s] =
+        result_arr[s].extend(result)
 
+    ans = 0
+    if i in range(1, n+1):
+        for j in result_arr[i]:
+            if i in result_arr[j]:
+                ans += 1
 
+    print(ans)
