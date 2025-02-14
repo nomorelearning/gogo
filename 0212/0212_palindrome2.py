@@ -25,3 +25,19 @@ for _ in range(10):
         else:
             continue
         break
+
+# 강사님 코드
+for _ in range(10):
+    tc = int(input())
+    row_arr = [list(input()) for _ in range(100)]
+    col_arr = [list(x) for x in zip(*row_arr)]
+    ans = 0
+    for x in range(100, 0, -1):
+        for i in range(100):
+            if find_palindrome(row_arr[i], x) or find_palindrome(col_arr[i], x):
+                ans = x
+                break
+        if ans:
+            break
+
+    print(f'#{tc}', x)

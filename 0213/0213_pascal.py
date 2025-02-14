@@ -16,3 +16,17 @@ for t in range(1,T+1):
     print(f'#{t}')
     for lst in arr:
         print(*lst)
+
+
+# 강사님 방법
+
+N = 10
+arr = [[0] * N for _ in range(N)]
+
+for r in range(N):
+    for c in range(1, r+1):
+        if c == 0 or r == c:
+            arr[r][c] = 1
+        else:
+            arr[r][c] = arr[r-1][c-1] + arr[r-1][c]
+
