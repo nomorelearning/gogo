@@ -26,7 +26,6 @@
 #             continue
 #
 #     print(f'#{tc}', result)
-#
 
 
 import sys
